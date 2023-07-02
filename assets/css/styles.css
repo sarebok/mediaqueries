@@ -5,10 +5,16 @@ body {
 .root {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "filters"
+        "main"
+        "footer";
     /* margin: 1rem; */
 }
 
 .nav-menu {
+    grid-area: nav;
     display: flex;
     justify-content: space-between;
     background-color: #054af2;
@@ -16,20 +22,76 @@ body {
     color: white;
 }
 
+.nav-sections {
+    display: none;
+}
+
 .search-filters {
+    grid-area: filters;
     text-align: center;
     background-color: #05fce7;
 }
 
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
 .product-card {
     text-align: center;
-    margin: 0 1rem 0rem 1rem;
-    padding: 1rem 0 1rem 0;
+    margin: 0 auto;
     border: 1px solid #10bee6;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card img {
+    width: 100%;
+    /* height: 200px; */
+    object-fit: cover;
 }
 
 footer {
+    grid-area: footer;
     text-align: center;
+    background-color: #054af2;
+    color: white;
 }
 
-@media (min-width: 992px);
+@media (min-width: 992px) {
+    .root {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "nav filters"
+            "nav main"
+            "footer main";
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hamburguer-icon {
+        display: none;
+    }
+
+    .nav-sections {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .nav-sections ul {
+        margin: 0.5rem;
+        padding: 0;
+    }
+
+    main {
+        flex-direction: row;
+    }
+}

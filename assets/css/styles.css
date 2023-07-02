@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+.root {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* margin: 1rem; */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #054af2;
+    padding: 0 1rem;
+    color: white;
+}
+
+.search-filters {
+    text-align: center;
+    background-color: #05fce7;
+}
+
+.product-card {
+    text-align: center;
+    margin: 0 1rem 0rem 1rem;
+    padding: 1rem 0 1rem 0;
+    border: 1px solid #10bee6;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (min-width: 992px);

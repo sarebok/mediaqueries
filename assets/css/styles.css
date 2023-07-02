@@ -13,11 +13,29 @@ body {
     /* margin: 1rem; */
 }
 
+.logo {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.logo p,
+.car-icon {
+    font-size: 1.5rem;
+}
+.logo p {
+    margin-left: 1rem;
+}
+
+.car-icon {
+    margin-bottom: 1rem;
+}
+
 .nav-menu {
     grid-area: nav;
     display: flex;
     justify-content: space-between;
-    background-color: #054af2;
+    background-color: #058efc;
     padding: 0 1rem;
     color: white;
 }
@@ -29,28 +47,40 @@ body {
 .search-filters {
     grid-area: filters;
     text-align: center;
-    background-color: #05fce7;
+    background-color: #054af2;
+    color: white;
 }
 
 main {
     grid-area: main;
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
+    justify-content: center;
 }
 
 .product-card {
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    padding: 0.5rem 0;
     border: 1px solid #10bee6;
-    max-width: 500px;
+    /* max-width: 500px; */
     justify-content: center;
     align-items: center;
 }
 
 .product-card img {
     width: 100%;
-    /* height: 200px; */
+    height: 300px;
     object-fit: cover;
+}
+
+.product-card button {
+    background-color: #054af2;
+    color: white;
+    border-radius: 5%;
+    width: 6rem;
+    height: 3rem;
 }
 
 footer {
@@ -58,9 +88,10 @@ footer {
     text-align: center;
     background-color: #054af2;
     color: white;
+    padding-top: 0.5rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
     .root {
         grid-template-columns: 1fr 3fr;
         grid-template-areas:
@@ -72,7 +103,7 @@ footer {
     .nav-menu {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -84,6 +115,7 @@ footer {
         display: flex;
         flex-direction: column;
         list-style: none;
+        margin-top: 4rem;
     }
 
     .nav-sections ul {
@@ -93,5 +125,7 @@ footer {
 
     main {
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }

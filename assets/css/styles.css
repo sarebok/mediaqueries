@@ -36,6 +36,11 @@ body {
     font-size: 1.5rem;
 }
 
+.dropdown-toggle{
+    background-color: #054af2;
+    border: none;
+}
+
 .nav-menu {
     grid-area: nav;
     display: flex;
@@ -66,7 +71,7 @@ main {
 
 .product-card {
     text-align: center;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     padding: 0.5rem 0;
     border: 1px solid #10bee6;
     /* max-width: 500px; */
@@ -76,8 +81,9 @@ main {
 
 .product-card img {
     width: 100%;
+    max-width: 400px;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .product-card button {
